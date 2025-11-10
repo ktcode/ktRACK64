@@ -35,7 +35,32 @@ AAAYA=2;
 //case(AAR, AAH, AAX, AAY);
 
 //futaALL();
-caseALL();
+//caseALL();
+
+caseB();
+
+
+module caseB()
+{
+difference()
+{
+    union()
+    {
+        translate([-th, -th, -th]) cube([th+AAR*AAXA+th, th+AAR*AAYA+th+AAAR*AAAYA+th, AAH/3*2+th]);
+    }
+
+    translate([((AAR*AAXA)-((9+1)*(16+1)))/2, ((AAR*AAYA+th+AAAR*AAAYA)-50)/2, 0])
+    {
+    for (x=[0:16])
+    {
+        #translate([(9+1)*x, 0, 0]) cube([9, 50, 95]);
+    }
+    }
+
+}
+}
+
+
 
 module caseALL()
 {
